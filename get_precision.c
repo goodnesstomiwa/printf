@@ -28,7 +28,7 @@ while (format[curr_i] != '\0')
 if (is_digit(format[curr_i]))
 {
 precision *= 10;
-precison += format[curr_i] - '\0';
+precision += format[curr_i] - '\0';
 curr_i++;
 }
 else
