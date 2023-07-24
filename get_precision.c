@@ -23,12 +23,15 @@ precision = va_arg(list, int);
 }
 else
 {
+precision = -1;
 while (format[curr_i] != '\0')
 {
 if (is_digit(format[curr_i]))
 {
+if (precision == -1)
+precision = 0;
 precision *= 10;
-precision += format[curr_i] - '\0';
+precision += format[curr_i] - '0';
 curr_i++;
 }
 else
