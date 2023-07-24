@@ -20,10 +20,11 @@ if (format[curr_i] == '*')
 {
 curr_i++;
 precision = va_arg(list, int);
+if (precision < 0)
+precision = -1;
 }
 else
 {
-precision = -1;
 while (format[curr_i] != '\0')
 {
 if (is_digit(format[curr_i]))
